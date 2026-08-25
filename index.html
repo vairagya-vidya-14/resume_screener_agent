@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viyora Café - Good Coffee, Great Moments</title>
+  <meta name="description" content="Experience the perfect blend of rich flavors, warm ambience and unforgettable moments at Viyora Café.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Feature & Review Section Styles for Home Page */
+    .why-section {
+      background-color: #190f09;
+      color: #f7ede2;
+      padding: 6rem 0;
+      border-top: 1px solid #3a2517;
+      border-bottom: 1px solid #3a2517;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background-color: #24160d;
+      padding: 2.2rem;
+      border-radius: 20px;
+      border: 1px solid #3a2517;
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      border-color: #cb9b57;
+      background-color: #2e1d12;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+    .feature-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: float 4s ease-in-out infinite;
+    }
+    .feature-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35rem;
+      color: #cb9b57;
+      margin-bottom: 0.6rem;
+    }
+    .feature-desc {
+      font-size: 0.9rem;
+      color: #bba99c;
+    }
+
+    .reviews-section {
+      padding: 6rem 0;
+      background-color: #f7f1ea;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.2rem;
+    }
+    .review-card {
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 24px;
+      border: 1px solid #e5d8ca;
+      box-shadow: 0 6px 18px rgba(42, 25, 14, 0.06);
+      position: relative;
+      transition: all 0.35s ease;
+    }
+    .review-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 36px rgba(42, 25, 14, 0.12);
+      border-color: #cb9b57;
+    }
+    .quote-mark {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4rem;
+      color: #cb9b57;
+      line-height: 0.8;
+      opacity: 0.3;
+      display: block;
+      margin-bottom: -1rem;
+    }
+    .review-text {
+      font-style: italic;
+      color: #8c786a;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .reviewer-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      color: #2a190e;
+    }
+    .reviewer-stars {
+      color: #cb9b57;
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body class="dark-page">
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">☕</span> Viyora Café
+      </a>
+      
+      <!-- Pure CSS 3-Line Hamburger Toggle (Zero JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="build.html" class="nav-link">Build Your Drink</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="menu.html" class="order-badge-pill">
+          🛒 <span>Order Now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Good Coffee<br>
+          Great <span class="accent-text">Moments</span>
+        </h1>
+        <p class="hero-subtitle">
+          Experience the perfect blend of rich flavors, warm ambience and unforgettable moments at Viyora Café. Handcrafted daily for coffee lovers.
+        </p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary">Explore Menu (45)</a>
+          <a href="reservation.html" class="btn btn-outline">Book a Table</a>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrapper">
+        <div class="hero-img-container">
+          <div class="hero-orbit-ring"></div>
+          <img src="images/hero.jpg" alt="Signature Viyora Coffee" class="hero-img">
+          
+          <!-- Steam Rise Keyframe Animations -->
+          <div class="steam-particle steam-1">♨</div>
+          <div class="steam-particle steam-2">♨</div>
+          <div class="steam-particle steam-3">♨</div>
+
+          <!-- Floating Badge -->
+          <div class="floating-badge">
+            <span style="color:#cb9b57; font-size:1.4rem;">★</span>
+            <div>
+              <div style="font-weight:700; font-size:0.95rem;">4.9 Rating</div>
+              <div style="font-size:0.78rem; color:#bba99c;">From 480+ Coffee Lovers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#specialties" class="scroll-indicator" title="Scroll Down">↓</a>
+  </section>
+
+  <!-- Our Specialties Section -->
+  <section id="specialties" class="specialties-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-tag">Our Specialties</h2>
+        <p class="section-subtitle">Handcrafted With Love & Passion</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="specialty-card">
+          <div class="card-img-wrap">
+            <span class="item-badge">Favorite</span>
+            <img src="images/cappuccino.jpg" alt="Cappuccino">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Cappuccino</h3>
+            <p class="card-desc">Rich espresso with steamed milk foam, the perfect foundation for any coffee lover.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.50</span>
+              <a href="menu.html" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card">
+          <div class="card-img-wrap">
+            <span class="item-badge">Rich</span>
+            <img src="images/mocha.jpg" alt="Mocha">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mocha</h3>
+            <p class="card-desc">Belgian dark chocolate blended with espresso and topped with velvety whipped cream.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.75</span>
+              <a href="menu.html" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card">
+          <div class="card-img-wrap">
+            <span class="item-badge">Chilled</span>
+            <img src="images/iced_coffee.jpg" alt="Caramel Latte">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Caramel Latte</h3>
+            <p class="card-desc">Smooth espresso with caramel delight, served hot or chilled over ice.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.80</span>
+              <a href="menu.html" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3.5rem;">
+        <a href="menu.html" class="btn btn-primary">View Full 45-Item Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header section-dark">
+        <h2 class="section-tag">Why Choose Us</h2>
+        <p class="section-subtitle">Excellence In Every Detail</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🫘</span>
+          <h3 class="feature-title">Premium Beans</h3>
+          <p class="feature-desc">We use the finest 100% Arabica coffee beans from sustainable organic farms.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">☕</span>
+          <h3 class="feature-title">Expert Baristas</h3>
+          <p class="feature-desc">Brewing perfection in every cup with gold-standard espresso technique.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🛋️</span>
+          <h3 class="feature-title">Cozy Ambience</h3>
+          <p class="feature-desc">A peaceful atmosphere designed for relaxation, conversations, and focus.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🌿</span>
+          <h3 class="feature-title">Fresh & Healthy</h3>
+          <p class="feature-desc">Handcrafted daily with fresh, high-quality, and natural ingredients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-tag">What Our Customers Say</h2>
+        <p class="section-subtitle">Real Words From Coffee Enthusiasts</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">The best coffee in town! The ambience is so warm and welcoming. Perfect spot for afternoon reads.</p>
+          <div class="reviewer-meta">
+            <div>
+              <h4 class="reviewer-name">Sarah J.</h4>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">I love their cappuccino and service. Highly recommended! The baristas are super friendly and attentive.</p>
+          <div class="reviewer-meta">
+            <div>
+              <h4 class="reviewer-name">David R.</h4>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="quote-mark">“</span>
+          <p class="review-text">Viyora Café is my go-to place for coffee and peace. Delicious pastries and great Wi-Fi too!</p>
+          <div class="reviewer-meta">
+            <div>
+              <h4 class="reviewer-name">Emily T.</h4>
+              <div class="reviewer-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">☕</span> Viyora Café
+          </a>
+          <p class="footer-tagline">Coffee · Conversations · Community</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">𝕏</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-info">
+            <p>📍 123 Coffee Street, Brewville, CA 90210</p>
+            <p>📞 +1 234 567 8900</p>
+            <p>✉️ hello@viyoracafe.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Opening Hours</h4>
+          <div class="footer-info">
+            <p>Mon - Fri: 8:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Viyora Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

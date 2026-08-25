@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews - Viyora Café (Auto-Scrolling Marquee)</title>
+  <meta name="description" content="Read authentic customer reviews with auto-scrolling feedback banner at Viyora Café.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .rating-summary {
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 2.5rem;
+      border: 1px solid #e5d8ca;
+      margin-bottom: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      box-shadow: 0 4px 12px rgba(42, 25, 14, 0.05);
+    }
+    .score-number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: #7c401c;
+      line-height: 1;
+    }
+    .score-stars {
+      color: #cb9b57;
+      font-size: 1.4rem;
+      margin: 0.4rem 0;
+    }
+    .review-form-box {
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 2.8rem;
+      border: 1px solid #e5d8ca;
+      margin-top: 4rem;
+      margin-bottom: 5rem;
+      box-shadow: 0 4px 12px rgba(42, 25, 14, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">☕</span> Viyora Café
+      </a>
+      
+      <!-- Pure CSS 3-Line Hamburger Toggle (Zero JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="build.html" class="nav-link">Build Your Drink</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="reviews.html" class="nav-link active">Reviews</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="menu.html" class="order-badge-pill">
+          🛒 <span>Order Now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Customer Reviews</h1>
+      <p class="page-subtitle">What Our Guests Love About Us</p>
+    </div>
+  </section>
+
+  <!-- Auto-Scrolling Customer Reviews Marquee Section -->
+  <div class="reviews-marquee-container">
+    <div class="reviews-marquee-track">
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">The best coffee in town! The ambience is so warm and welcoming. Perfect spot for afternoon reads.</p>
+        <div style="font-weight:700; color:#2a190e;">Sarah J. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">I love their cappuccino and service. Highly recommended! The oat milk latte is divine.</p>
+        <div style="font-weight:700; color:#2a190e;">David R. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">Viyora Café is my go-to place for coffee and peace. Staff is attentive and pastry selection is great.</p>
+        <div style="font-weight:700; color:#2a190e;">Emily T. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">The nitro cold brew is insanely smooth! Will definitely bring my friends here again.</p>
+        <div style="font-weight:700; color:#2a190e;">Marcus L. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">Charming coffee shop with rich aromas and comfortable seats. 10/10 rating!</p>
+        <div style="font-weight:700; color:#2a190e;">Jessica K. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <!-- Duplicate for infinite seamless scroll -->
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">The best coffee in town! The ambience is so warm and welcoming.</p>
+        <div style="font-weight:700; color:#2a190e;">Sarah J. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+
+      <div class="review-card-scroll">
+        <span style="font-size:3rem; color:#cb9b57; opacity:0.4;">“</span>
+        <p style="font-style:italic; margin-bottom:1rem; color:#8c786a;">I love their cappuccino and service. Highly recommended!</p>
+        <div style="font-weight:700; color:#2a190e;">David R. <span style="color:#cb9b57; font-size:0.85rem;">★★★★★</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reviews Content Container -->
+  <div class="container">
+    <!-- Overall Rating Score -->
+    <div class="rating-summary">
+      <div style="text-align:center;">
+        <div class="score-number">4.9</div>
+        <div class="score-stars">★★★★★</div>
+        <p style="color:#8c786a; font-size:0.9rem;">Based on 480+ Customer Reviews</p>
+      </div>
+
+      <div style="flex:1; max-width:400px;">
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.4rem;">
+          <span style="width:50px; font-size:0.85rem;">5 Stars</span>
+          <div style="flex:1; height:8px; background:#e8dfd5; border-radius:4px; overflow:hidden;">
+            <div style="width:92%; height:100%; background:#cb9b57;"></div>
+          </div>
+          <span style="font-size:0.85rem;">92%</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:0.4rem;">
+          <span style="width:50px; font-size:0.85rem;">4 Stars</span>
+          <div style="flex:1; height:8px; background:#e8dfd5; border-radius:4px; overflow:hidden;">
+            <div style="width:6%; height:100%; background:#cb9b57;"></div>
+          </div>
+          <span style="font-size:0.85rem;">6%</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:1rem;">
+          <span style="width:50px; font-size:0.85rem;">3 Stars</span>
+          <div style="flex:1; height:8px; background:#e8dfd5; border-radius:4px; overflow:hidden;">
+            <div style="width:2%; height:100%; background:#cb9b57;"></div>
+          </div>
+          <span style="font-size:0.85rem;">2%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit a Review Form -->
+    <div class="review-form-box">
+      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:1.5rem; color:#2a190e;">Leave Your Feedback</h3>
+      <form action="#review-thanks">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-input" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Rating</label>
+            <div class="pure-star-rating">
+              <input type="radio" id="st5" name="rate" value="5" checked><label for="st5">★</label>
+              <input type="radio" id="st4" name="rate" value="4"><label for="st4">★</label>
+              <input type="radio" id="st3" name="rate" value="3"><label for="st3">★</label>
+              <input type="radio" id="st2" name="rate" value="2"><label for="st2">★</label>
+              <input type="radio" id="st1" name="rate" value="1"><label for="st1">★</label>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Your Experience</label>
+            <textarea class="form-textarea" placeholder="Tell us about your visit..." required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Pure CSS Target Modal for Review Thanks -->
+  <div class="target-modal" id="review-thanks">
+    <div class="modal-card">
+      <div style="font-size:3rem; color:#cb9b57; margin-bottom:1rem;">⭐</div>
+      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:0.5rem;">Thank You!</h3>
+      <p style="color:#8c786a; margin-bottom:1.5rem;">Your review has been submitted successfully to Viyora Café.</p>
+      <a href="#" class="btn btn-primary">Close</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">☕</span> Viyora Café
+          </a>
+          <p class="footer-tagline">Coffee · Conversations · Community</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">𝕏</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-info">
+            <p>📍 123 Coffee Street, Brewville, CA 90210</p>
+            <p>📞 +1 234 567 8900</p>
+            <p>✉️ hello@viyoracafe.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Opening Hours</h4>
+          <div class="footer-info">
+            <p>Mon - Fri: 8:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Viyora Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

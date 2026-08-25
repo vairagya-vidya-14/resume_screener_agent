@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu - Viyora Café (Artisanal Coffee, Food & Desserts)</title>
+  <meta name="description" content="Explore Viyora Café's full menu featuring 12 specific coffees across 3 categories, 29 gourmet food items across 7 categories, and 17 desserts with dedicated Google/Unsplash photos.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .section-category-heading {
+      grid-column: 1 / -1;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8rem;
+      color: #7c401c;
+      margin-top: 2.2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #e5d8ca;
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">☕</span> Viyora Café
+      </a>
+      
+      <!-- Pure CSS 3-Line Hamburger Toggle (Zero JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="build.html" class="nav-link">Build Your Drink</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="#menu-grid" class="order-badge-pill">
+          🛒 <span>Explore Menu</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Our Full Menu</h1>
+      <p class="page-subtitle">Explore 58 Artisanal Coffees, Gourmet Dishes & Handcrafted Desserts</p>
+    </div>
+  </section>
+
+  <!-- Menu Content Section -->
+  <section class="specialties-section">
+    <div class="container">
+
+      <!-- Pure CSS Hidden Radio Inputs for Tab Filtering -->
+      <input type="radio" id="filter-all" name="menu-filter" checked class="css-tab-radio">
+      <input type="radio" id="filter-coffee" name="menu-filter" class="css-tab-radio">
+      <input type="radio" id="filter-food" name="menu-filter" class="css-tab-radio">
+      <input type="radio" id="filter-desserts" name="menu-filter" class="css-tab-radio">
+
+      <!-- Pure CSS Filter Tabs -->
+      <div class="filter-tabs">
+        <label for="filter-all" class="tab-label"><a href="">☕ All (58)</a></label>
+        <label for="filter-coffee" class="tab-label"><a href="#aa">☕ Coffee (12)</a></label>
+        <label for="filter-food" class="tab-label"><a href="#bb">🥪 Food & Mains (29)</a></label>
+        <label for="filter-desserts" class="tab-label"><a href="#cc">🍰 Desserts & Bakery (17)</a></label>
+      </div>
+
+      <!-- 58-Item Grid with Authentic Google/Unsplash Food & Coffee Photos -->
+      <div class="cards-grid" id="menu-grid">
+
+        <!-- ==================== 12 COFFEE ITEMS BY 3 SUB-CATEGORIES ==================== -->
+        
+        <!-- SUB-CATEGORY 1: CLASSIC COFFEES -->
+          <div class="section-category-heading menu-item" data-category="coffee" id="aa">
+          Coffees
+        </div>
+        <div class="section-category-heading menu-item" data-category="coffee">
+          ☕ Classic Coffees
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Bestseller</span>
+            <img src="images/coffee_1.jpg" alt="Espresso">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">1. Espresso</h3>
+            <p class="card-desc">Rich and bold single espresso shot brewed from organic dark roast beans.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Strong</span>
+            <img src="images/coffee_2.jpg" alt="Double Espresso">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">2. Double Espresso</h3>
+            <p class="card-desc">Intense double shot of dark roasted espresso with golden crema.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <img src="images/coffee_3.jpg" alt="Americano">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">3. Americano</h3>
+            <p class="card-desc">Espresso shots diluted with hot water for a rich, smooth flavor.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 2: COLD COFFEES -->
+        <div class="section-category-heading menu-item" data-category="coffee">
+          🧊 Cold Coffees
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Chilled</span>
+            <img src="images/coffee_4.jpg" alt="Iced Americano">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">4. Iced Americano</h3>
+            <p class="card-desc">Crisp double espresso over cold filtered water and ice cubes.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Popular</span>
+            <img src="images/coffee_5.jpg" alt="Iced Latte">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">5. Iced Latte</h3>
+            <p class="card-desc">Smooth espresso with cold whole milk served over crushed ice.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.60</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <img src="images/coffee_6.jpg" alt="Iced Mocha">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">6. Iced Mocha</h3>
+            <p class="card-desc">Belgian dark chocolate syrup with cold espresso & milk over ice.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Refresh</span>
+            <img src="images/coffee_7.jpg" alt="Cold Coffee">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">7. Cold Coffee</h3>
+            <p class="card-desc">Blended creamy cold coffee topped with cocoa powder & chocolate syrup.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <img src="images/coffee_8.jpg" alt="Cold Brew">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">8. Cold Brew</h3>
+            <p class="card-desc">Slow-steeped 18-hour cold brew with natural sweetness & smooth finish.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 3: SIGNATURE COFFEES -->
+        <div class="section-category-heading menu-item" data-category="coffee">
+          ✨ Signature Coffees
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Signature</span>
+            <img src="images/coffee_9.jpg" alt="Caramel Cloud Coffee">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">9. Caramel Cloud Coffee</h3>
+            <p class="card-desc">Velvety steamed espresso topped with cloud cream foam & salted caramel drizzle.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">House Special</span>
+            <img src="images/coffee_10.jpg" alt="Vanilla Dream Latte">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">10. Vanilla Dream Latte</h3>
+            <p class="card-desc">French Madagascan vanilla bean infusion with silky textured microfoam.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <img src="images/coffee_11.jpg" alt="Hazelnut Velvet">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">11. Hazelnut Velvet</h3>
+            <p class="card-desc">Roasted hazelnut syrup blended with dark espresso & steamed milk foam.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.40</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="coffee">
+          <div class="card-img-wrap">
+            <span class="item-badge">Decadent</span>
+            <img src="images/coffee_12.jpg" alt="Mocha Bliss">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">12. Mocha Bliss</h3>
+            <p class="card-desc">Triple chocolate mocha with whipped cream topping & dark chocolate shavings.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.60</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ==================== 29 FOOD ITEMS BY 7 SUB-CATEGORIES ==================== -->
+        
+        <!-- SUB-CATEGORY 1: BURGERS & SANDWICHES -->
+         <div class="section-category-heading menu-item" data-category="food" id="bb">
+          FOOD ITEMS
+        </div>
+        <div class="section-category-heading menu-item" data-category="food">
+          🍔 Burgers & Sandwiches
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Bestseller</span>
+            <img src="images/food_16.jpg" alt="Classic Veg Burger">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">13. Classic Veg Burger</h3>
+            <p class="card-desc">Crispy garden veggie patty with fresh lettuce, tomato & house herb mayo on toasted brioche.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Popular</span>
+            <img src="images/food_17.jpg" alt="Crispy Chicken Burger">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">14. Crispy Chicken Burger</h3>
+            <p class="card-desc">Golden seasoned crispy chicken breast with spicy aioli & crunchy pickles.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_18.jpg" alt="Paneer Burger">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">15. Paneer Burger</h3>
+            <p class="card-desc">Spiced grilled cottage cheese slab with mint chutney spread & crunchy onions.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_19.jpg" alt="Grilled Cheese Sandwich">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">16. Grilled Cheese Sandwich</h3>
+            <p class="card-desc">Melted triple-cheese blend of aged cheddar, mozzarella & parmesan on buttered sourdough.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_20.jpg" alt="Club Sandwich">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">17. Club Sandwich</h3>
+            <p class="card-desc">Triple-decker toasted sandwich with roasted veggies, turkey, bacon & honey mustard.</p>
+            <div class="card-footer">
+              <span class="card-price">$9.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 2: QUICK BITES -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🍕 Quick Bites & Pizzas
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Classic</span>
+            <img src="images/food_21.jpg" alt="Margherita Pizza">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">18. Margherita Pizza</h3>
+            <p class="card-desc">Hand-tossed crust topped with San Marzano tomato sauce, fresh mozzarella & basil.</p>
+            <div class="card-footer">
+              <span class="card-price">$10.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_22.jpg" alt="Veggie Pizza">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">19. Veggie Pizza</h3>
+            <p class="card-desc">Loaded with bell peppers, sweet corn, mushrooms, black olives & extra cheese.</p>
+            <div class="card-footer">
+              <span class="card-price">$11.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_23.jpg" alt="Chicken Pizza">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">20. Chicken Pizza</h3>
+            <p class="card-desc">Herbed chicken chunks, red onions, BBQ sauce glaze & melted mozzarella.</p>
+            <div class="card-footer">
+              <span class="card-price">$12.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_24.jpg" alt="Garlic Bread">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">21. Garlic Bread</h3>
+            <p class="card-desc">Toasted baguette slices infused with garlic herb butter & roasted parsley.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Bestseller</span>
+            <img src="images/food_25.jpg" alt="Cheese Garlic Bread">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">22. Cheese Garlic Bread</h3>
+            <p class="card-desc">Golden garlic bread smothered in melted mozzarella & oregano seasoning.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 3: PASTA & MAINS -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🍝 Pasta & Mains
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Chef Special</span>
+            <img src="images/food_26.jpg" alt="White Sauce Pasta">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">23. White Sauce Pasta</h3>
+            <p class="card-desc">Penne pasta tossed in rich parmesan cream sauce with sautéed mushrooms.</p>
+            <div class="card-footer">
+              <span class="card-price">$9.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_27.jpg" alt="Arrabbiata Pasta">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">24. Arrabbiata Pasta</h3>
+            <p class="card-desc">Spicy red tomato basil sauce with chili flakes, garlic & parmesan shavings.</p>
+            <div class="card-footer">
+              <span class="card-price">$9.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_28.jpg" alt="Creamy Alfredo Pasta">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">25. Creamy Alfredo Pasta</h3>
+            <p class="card-desc">Fettuccine pasta in heavy cream, butter & freshly grated aged parmesan cheese.</p>
+            <div class="card-footer">
+              <span class="card-price">$10.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 4: WRAPS & ROLLS -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🌯 Wraps & Rolls
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_29.jpg" alt="Paneer Wrap">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">26. Paneer Wrap</h3>
+            <p class="card-desc">Spiced cottage cheese cubes wrapped in tortilla with mint mayonnaise & onion rings.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_30.jpg" alt="Veggie Wrap">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">27. Veggie Wrap</h3>
+            <p class="card-desc">Fresh avocado, spinach, bell peppers & chickpea hummus in a whole wheat tortilla.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Favorite</span>
+            <img src="images/food_31.jpg" alt="Chicken Shawarma Roll">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">28. Chicken Shawarma Roll</h3>
+            <p class="card-desc">Slow-roasted marinated chicken in flatbread with garlic toum sauce & pickles.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 5: BREAKFAST -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🍳 Breakfast Specials
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_32.jpg" alt="Masala Omelette">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">29. Masala Omelette</h3>
+            <p class="card-desc">Spiced three-egg omelette with diced onions, tomatoes, green chilies & butter toast.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_33.jpg" alt="Cheese Omelette">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">30. Cheese Omelette</h3>
+            <p class="card-desc">Fluffy organic egg omelette stuffed with melted sharp cheddar cheese.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Sweet</span>
+            <img src="images/food_34.jpg" alt="French Toast">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">31. Golden French Toast</h3>
+            <p class="card-desc">Thick brioche slices dipped in vanilla cinnamon batter, served with maple syrup.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.40</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 6: CAFE SNACKS -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🥐 Cafe Snacks & Bakery
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Crispy</span>
+            <img src="images/food_35.jpg" alt="Samosa">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">32. Crispy Veg Samosa</h3>
+            <p class="card-desc">Golden fried pastry pocket stuffed with spiced potato & green peas mixture.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_36.jpg" alt="Veg Puff">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">33. Veg Puff</h3>
+            <p class="card-desc">Flaky puff pastry filled with seasoned mixed vegetables & aromatic herbs.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_37.jpg" alt="Chicken Puff">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">34. Chicken Puff</h3>
+            <p class="card-desc">Layered golden pastry filled with savory minced chicken & spices.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.95</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_38.jpg" alt="Paneer Puff">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">35. Paneer Puff</h3>
+            <p class="card-desc">Crispy puff pastry stuffed with spicy cottage cheese filling.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.75</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY 7: LIGHT & HEALTHY -->
+        <div class="section-category-heading menu-item" data-category="food">
+          🥗 Light & Healthy
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_39.jpg" alt="Veg Sandwich">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">36. Garden Veg Sandwich</h3>
+            <p class="card-desc">Whole wheat bread with cucumber, tomato, lettuce & mint spread.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Healthy</span>
+            <img src="images/food_40.jpg" alt="Grilled Chicken Salad">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">37. Grilled Chicken Salad</h3>
+            <p class="card-desc">Juicy grilled chicken breast, mixed greens, avocado & lemon vinaigrette.</p>
+            <div class="card-footer">
+              <span class="card-price">$9.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_41.jpg" alt="Caesar Salad">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">38. Classic Caesar Salad</h3>
+            <p class="card-desc">Crisp romaine lettuce, garlic croutons, parmesan cheese & Caesar dressing.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Fresh</span>
+            <img src="images/food_42.jpg" alt="Fruit Bowl">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">39. Fresh Seasonal Fruit Bowl</h3>
+            <p class="card-desc">Assorted fresh strawberries, blueberries, kiwi, mango & honey mint syrup.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <span class="item-badge">Signature</span>
+            <img src="images/food_43.jpg" alt="Avocado Toast">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">40. Artisanal Avocado Toast</h3>
+            <p class="card-desc">Toasted sourdough topped with smashed avocado, poached organic egg & chili flakes.</p>
+            <div class="card-footer">
+              <span class="card-price">$8.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="food">
+          <div class="card-img-wrap">
+            <img src="images/food_44.jpg" alt="Corn & Cheese Salad">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">41. Corn & Cheese Salad</h3>
+            <p class="card-desc">Sweet corn kernels, bell peppers, feta cheese & herb lime dressing.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ==================== 17 DESSERT ITEMS ==================== -->
+        
+        <!-- SUB-CATEGORY: CAKES & PASTRIES -->
+         <div class="section-category-heading menu-item" data-category="desserts" id="cc">
+       DESSERTS
+        </div>
+        <div class="section-category-heading menu-item" data-category="desserts">
+          🍰 Cakes & Pastries
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Bestseller</span>
+            <img src="images/dessert_31.jpg" alt="Chocolate Truffle Cake">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">42. Chocolate Truffle Cake</h3>
+            <p class="card-desc">Rich Belgian dark chocolate truffle cake topped with cocoa dusting & fresh berries.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Popular</span>
+            <img src="images/dessert_32.jpg" alt="Red Velvet Cake">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">43. Red Velvet Cake</h3>
+            <p class="card-desc">Moist red velvet sponge layers filled with silky smooth vanilla cream cheese frosting.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_33.jpg" alt="Blueberry Cheesecake">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">44. Blueberry Cheesecake</h3>
+            <p class="card-desc">New York baked cream cheesecake topped with wild blueberry compote.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Signature</span>
+            <img src="images/dessert_34.jpg" alt="Lotus Biscoff Cheesecake">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">45. Lotus Biscoff Cheesecake</h3>
+            <p class="card-desc">Creamy Biscoff cookie butter cheesecake with crushed Biscoff biscuit crust.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.20</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_35.jpg" alt="Chocolate Brownie">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">46. Chocolate Brownie</h3>
+            <p class="card-desc">Fudgy dark chocolate brownie baked with real cocoa chunks.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Favorite</span>
+            <img src="images/dessert_36.jpg" alt="Fudge Brownie with Ice Cream">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">47. Fudge Brownie with Ice Cream</h3>
+            <p class="card-desc">Warm fudge brownie topped with a scoop of Madagascar vanilla ice cream & hot chocolate drizzle.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY: COOKIES & BITES -->
+        <div class="section-category-heading menu-item" data-category="desserts">
+          🍪 Cookies & Bites
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Fresh Baked</span>
+            <img src="images/dessert_37.jpg" alt="Chocolate Chip Cookies">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">48. Chocolate Chip Cookies</h3>
+            <p class="card-desc">Classic warm butter cookies packed with melted milk chocolate chips.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_38.jpg" alt="Double Chocolate Cookies">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">49. Double Chocolate Cookies</h3>
+            <p class="card-desc">Dark cocoa cookie dough loaded with white & dark chocolate chunks.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.75</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_39.jpg" alt="Red Velvet Cookies">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">50. Red Velvet Cookies</h3>
+            <p class="card-desc">Chewy red velvet cookies swirled with sweet cream cheese morsels.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Special</span>
+            <img src="images/dessert_40.jpg" alt="Brookies">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">51. Brookies</h3>
+            <p class="card-desc">Ultimate hybrid fusion: Half fudgy brownie and half chocolate chip cookie.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_41.jpg" alt="Oatmeal Raisin Cookies">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">52. Oatmeal Raisin Cookies</h3>
+            <p class="card-desc">Whole grain oats baked with Ceylon cinnamon & sweet sun-dried raisins.</p>
+            <div class="card-footer">
+              <span class="card-price">$3.60</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY: COLD DESSERTS -->
+        <div class="section-category-heading menu-item" data-category="desserts">
+          🍨 Cold Desserts
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Refreshing</span>
+            <img src="images/dessert_42.jpg" alt="Mango Cream Cup">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">53. Mango Cream Cup</h3>
+            <p class="card-desc">Alphonso mango pulp layered with chilled vanilla cream & graham crumbles.</p>
+            <div class="card-footer">
+              <span class="card-price">$4.95</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_43.jpg" alt="Classic Ice Cream Scoop">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">54. Classic Ice Cream Scoop</h3>
+            <p class="card-desc">Scoop of artisan gelato (Choice of Vanilla Bean, Dark Chocolate, or Pistachio).</p>
+            <div class="card-footer">
+              <span class="card-price">$3.50</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Classic</span>
+            <img src="images/dessert_44.jpg" alt="Tiramisu Cup">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">55. Tiramisu Cup</h3>
+            <p class="card-desc">Espresso-soaked ladyfingers in a cup with mascarpone mousse & cocoa dust.</p>
+            <div class="card-footer">
+              <span class="card-price">$5.25</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUB-CATEGORY: CAFE SPECIALS -->
+        <div class="section-category-heading menu-item" data-category="desserts">
+          🥞 Cafe Specials
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">House Special</span>
+            <img src="images/dessert_45.jpg" alt="Nutella Pancakes">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">56. Nutella Pancakes</h3>
+            <p class="card-desc">Fluffy buttermilk pancakes stacked with warm Nutella spread & sliced banana.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.90</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <img src="images/dessert_46.jpg" alt="Biscoff Pancakes">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">57. Biscoff Pancakes</h3>
+            <p class="card-desc">Golden pancake stack drizzled with melted Biscoff cookie butter & crumbles.</p>
+            <div class="card-footer">
+              <span class="card-price">$7.10</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="specialty-card menu-item" data-category="desserts">
+          <div class="card-img-wrap">
+            <span class="item-badge">Crispy</span>
+            <img src="images/dessert_47.jpg" alt="Chocolate Waffles">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">58. Chocolate Waffles</h3>
+            <p class="card-desc">Belgian waffle baked with cocoa batter, served with maple syrup & dark chocolate chips.</p>
+            <div class="card-footer">
+              <span class="card-price">$6.80</span>
+              <a href="#ordered" class="add-btn" title="Add to order">+</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pure CSS Target Modal for Order Confirmation -->
+  <div class="target-modal" id="ordered">
+    <div class="modal-card">
+      <div style="font-size:3.5rem; color:#cb9b57; margin-bottom:1rem;">☕</div>
+      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:0.5rem; color:#2a190e;">Item Added to Order!</h3>
+      <p style="color:#8c786a; margin-bottom:1.5rem;">Your selection has been added to your coffee order at Viyora Café.</p>
+      <a href="#" class="btn btn-primary">Continue Browsing</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">☕</span> Viyora Café
+          </a>
+          <p class="footer-tagline">Coffee · Conversations · Community</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">𝕏</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-info">
+            <p>📍 123 Coffee Street, Brewville, CA 90210</p>
+            <p>📞 +1 234 567 8900</p>
+            <p>✉️ hello@viyoracafe.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Opening Hours</h4>
+          <div class="footer-info">
+            <p>Mon - Fri: 8:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Viyora Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

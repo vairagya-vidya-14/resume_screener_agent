@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page - Viyora Café</title>
+  <meta name="description" content="Learn about Viyora Café's story, coffee roasting history, and journey since 2015.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Replica About Page Layout */
+    .about-story-replica {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      padding: 3rem 0 6rem;
+    }
+
+    .story-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.8rem;
+      color: #2a190e;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .story-subtitle-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #cb9b57;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .story-text-p {
+      color: #8c786a;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .story-image-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 16px 36px rgba(42, 25, 14, 0.12);
+      border: 6px solid #ffffff;
+      transition: all 0.4s ease;
+    }
+
+    .story-image-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 45px rgba(42, 25, 14, 0.18);
+    }
+
+    .story-image-card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .story-image-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Horizontal Timeline Replica */
+    .timeline-section-replica {
+      padding: 4rem 0 6rem;
+    }
+
+    .timeline-track-line {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 4rem;
+      padding: 0 20px;
+    }
+
+    .timeline-track-line::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 40px;
+      right: 40px;
+      height: 2px;
+      background: #e5d8ca;
+      z-index: 1;
+    }
+
+    .timeline-node {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 140px;
+    }
+
+    .timeline-ring {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: #f7f1ea;
+      border: 3px solid #cb9b57;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 0 4px #f7f1ea;
+    }
+
+    .timeline-node:hover .timeline-ring {
+      background-color: #cb9b57;
+      transform: scale(1.3);
+      box-shadow: 0 0 20px rgba(203, 155, 87, 0.6);
+    }
+
+    .timeline-year-text {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2a190e;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-desc-text {
+      font-size: 0.85rem;
+      color: #8c786a;
+    }
+
+    /* Extra Animated Feature Highlights */
+    .extra-info-section {
+      background: #ffffff;
+      padding: 4rem 0;
+      border-top: 1px solid #e5d8ca;
+      border-bottom: 1px solid #e5d8ca;
+      margin-bottom: 4rem;
+    }
+
+    .extra-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+    }
+
+    .extra-info-card {
+      background-color: #fdfaf7;
+      border: 1px solid #f0e6dc;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .extra-info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #cb9b57, #7c401c);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .extra-info-card:hover {
+      transform: translateY(-8px);
+      background-color: #ffffff;
+      border-color: #cb9b57;
+      box-shadow: 0 12px 30px rgba(203, 155, 87, 0.15);
+    }
+
+    .extra-info-card:hover::before {
+      opacity: 1;
+    }
+
+    .extra-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @media (max-width: 992px) {
+      .about-story-replica { grid-template-columns: 1fr; }
+      .timeline-track-line { flex-wrap: wrap; gap: 2rem; }
+      .timeline-track-line::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">☕</span> Viyora Café
+      </a>
+      
+      <!-- Pure CSS 3-Line Hamburger Toggle (Zero JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+      <label for="nav-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="build.html" class="nav-link">Build Your Drink</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="offers.html" class="nav-link">Offers</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <a href="menu.html" class="order-badge-pill">
+          🛒 <span>Order Now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">About Page</h1>
+    </div>
+  </section>
+
+  <!-- Our Story Replica Section -->
+  <div class="container">
+    <div class="about-story-replica">
+      <!-- Left Column: Story Text -->
+      <div>
+        <h2 class="story-title">Our Story</h2>
+        <span class="story-subtitle-script">Brewing Happiness Since 2015</span>
+        
+        <p class="story-text-p">
+          Viyora Café was born out of a passion for coffee and community. Our journey started with a small dream to create a space where people can relax, connect and enjoy exceptional coffee handcrafted from ethically sourced beans.
+        </p>
+
+        <p class="story-text-p">
+          Every cup we serve is a tribute to master craftsmanship, warm hospitality, and the fine art of coffee roasting. Whether you are grabbing a quick morning espresso or spending an afternoon reading, Viyora Café is your home away from home.
+        </p>
+
+        <div style="margin-top:2rem;">
+          <a href="menu.html" class="btn btn-primary" style="padding:0.85rem 2.4rem;">Read More</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Story Image Card -->
+      <div class="story-image-card">
+        <img src="images/interior.jpg" alt="Viyora Cafe Interior Showcase">
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Journey Horizontal Timeline Replica -->
+  <section class="timeline-section-replica">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:1rem;">
+        <h2 class="section-tag">Our Journey</h2>
+      </div>
+
+      <div class="timeline-track-line">
+        <div class="timeline-node">
+          <div class="timeline-ring"></div>
+          <div class="timeline-year-text">2015</div>
+          <div class="timeline-desc-text">Our Beginning</div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-ring"></div>
+          <div class="timeline-year-text">2017</div>
+          <div class="timeline-desc-text">First Café Opened</div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-ring"></div>
+          <div class="timeline-year-text">2019</div>
+          <div class="timeline-desc-text">Expanding Our Family</div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-ring"></div>
+          <div class="timeline-year-text">2022</div>
+          <div class="timeline-desc-text">10K+ Happy Customers</div>
+        </div>
+
+        <div class="timeline-node">
+          <div class="timeline-ring"></div>
+          <div class="timeline-year-text">2024</div>
+          <div class="timeline-desc-text">Growing With You</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Animated Features & Info Section -->
+  <section class="extra-info-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2.5rem;">
+        <h2 class="section-tag">Our Core Pillars</h2>
+        <p class="section-subtitle">What Makes Viyora Café Special</p>
+      </div>
+
+      <div class="extra-info-grid">
+        <div class="extra-info-card">
+          <span class="extra-icon">🌱</span>
+          <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.2rem; color:#2a190e; margin-bottom:0.5rem;">100% Organic Beans</h3>
+          <p style="font-size:0.88rem; color:#8c786a;">Sourced directly from certified fair-trade organic coffee estates around the world.</p>
+        </div>
+
+        <div class="extra-info-card">
+          <span class="extra-icon">🔥</span>
+          <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.2rem; color:#2a190e; margin-bottom:0.5rem;">Artisanal Roasting</h3>
+          <p style="font-size:0.88rem; color:#8c786a;">Small-batch roasted in-house daily to maximize complex flavor profiles and aroma.</p>
+        </div>
+
+        <div class="extra-info-card">
+          <span class="extra-icon">🤝</span>
+          <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.2rem; color:#2a190e; margin-bottom:0.5rem;">Community First</h3>
+          <p style="font-size:0.88rem; color:#8c786a;">Creating a cozy, welcoming space for local artists, remote workers, and friends.</p>
+        </div>
+
+        <div class="extra-info-card">
+          <span class="extra-icon">🍰</span>
+          <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.2rem; color:#2a190e; margin-bottom:0.5rem;">Fresh Daily Bakery</h3>
+          <p style="font-size:0.88rem; color:#8c786a;">Butter croissants, artisan cakes, and savory sourdough toasts baked every morning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <span class="logo-icon">☕</span> Viyora Café
+          </a>
+          <p class="footer-tagline">Coffee · Conversations · Community</p>
+          <div class="social-links">
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">𝕏</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <div class="footer-info">
+            <p>📍 123 Coffee Street, Brewville, CA 90210</p>
+            <p>📞 +1 234 567 8900</p>
+            <p>✉️ hello@viyoracafe.com</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Opening Hours</h4>
+          <div class="footer-info">
+            <p>Mon - Fri: 8:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Viyora Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
