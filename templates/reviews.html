@@ -175,11 +175,11 @@
     <!-- Submit a Review Form -->
     <div class="review-form-box">
       <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:1.5rem; color:#2a190e;">Leave Your Feedback</h3>
-      <form action="#review-thanks">
+      <form action="/reviews" method="POST">
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label">Your Name</label>
-            <input type="text" class="form-input" placeholder="Enter your name" required>
+            <input type="text" name="author_name" class="form-input" placeholder="Enter your name" required>
           </div>
 
           <div class="form-group">
@@ -194,8 +194,8 @@
           </div>
 
           <div class="form-group full-width">
-            <label class="form-label">Your Experience</label>
-            <textarea class="form-textarea" placeholder="Tell us about your visit..." required></textarea>
+            <label class="form-label">Your Review</label>
+            <textarea name="comment" class="form-textarea" placeholder="Tell us about your experience at Viyora Café..." required></textarea>
           </div>
         </div>
         <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">Submit Review</button>

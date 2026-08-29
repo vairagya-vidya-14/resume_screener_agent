@@ -206,26 +206,26 @@
         <p style="font-size:0.9rem; color:#8c786a;">Select your date, time & guest details below</p>
       </div>
 
-      <form action="#booked">
+      <form action="/reservation" method="POST">
         <div class="inside-border-group">
           <label class="form-label">Your Name</label>
-          <input type="text" class="form-input" placeholder="Enter your full name" required style="width:100%;">
+          <input type="text" name="name" class="form-input" placeholder="Enter your full name" required style="width:100%;">
         </div>
 
         <div class="inside-border-group">
           <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="Enter your email" required style="width:100%;">
+          <input type="email" name="email" class="form-input" placeholder="Enter your email" required style="width:100%;">
         </div>
 
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
           <div class="inside-border-group">
             <label class="form-label">Date</label>
-            <input type="date" class="form-input" required style="width:100%;">
+            <input type="date" name="date" class="form-input" required style="width:100%;">
           </div>
 
           <div class="inside-border-group">
             <label class="form-label">Time</label>
-            <select class="form-select" required style="width:100%;">
+            <select name="time" class="form-select" required style="width:100%;">
               <option value="">Select time</option>
               <option value="09:00 AM">09:00 AM</option>
               <option value="11:00 AM">11:00 AM</option>
@@ -239,7 +239,7 @@
 
         <div class="inside-border-group">
           <label class="form-label">Number of Guests</label>
-          <select class="form-select" required style="width:100%;">
+          <select name="guests" class="form-select" required style="width:100%;">
             <option value="">Select guests</option>
             <option value="1 Person">1 Person</option>
             <option value="2 People">2 People</option>
@@ -250,7 +250,7 @@
 
         <div class="inside-border-group">
           <label class="form-label">Special Request</label>
-          <input type="text" class="form-input" placeholder="Window seat, quiet corner, etc." style="width:100%;">
+          <input type="text" name="special_requests" class="form-input" placeholder="Window seat, quiet corner, etc." style="width:100%;">
         </div>
 
         <div style="text-align:center; margin-top:1.8rem;">

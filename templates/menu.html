@@ -49,6 +49,7 @@
         <li><a href="reviews.html" class="nav-link">Reviews</a></li>
         <li><a href="reservation.html" class="nav-link">Reservation</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="/admin" class="nav-link" style="color:#cb9b57; font-weight:700;">Admin</a></li>
       </ul>
       <div class="header-actions">
         <a href="#menu-grid" class="order-badge-pill">
@@ -1030,13 +1031,97 @@
     </div>
   </section>
 
-  <!-- Pure CSS Target Modal for Order Confirmation -->
+  <!-- Floating Cart Button -->
+  <a href="#cart-view" class="cart-floating-btn" id="cart-floating-btn">
+    🛒 <span>View Cart</span> (<span id="cart-badge">0</span>)
+  </a>
+
+  <!-- Target Modal: Interactive Cart & Table Checkout (#cart-view) -->
+  <div class="target-modal" id="cart-view">
+    <div class="modal-card" style="max-width: 650px; text-align: left; padding: 2.2rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #e5d8ca; padding-bottom:1rem; margin-bottom:1.5rem;">
+        <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.6rem; color:#2a190e; margin:0;">🛒 Your Order Cart</h3>
+        <a href="#" class="btn btn-secondary" style="padding:0.4rem 1rem; font-size:0.85rem;">✕ Close</a>
+      </div>
+
+      <!-- Itemized Cart List -->
+      <div id="cart-items-container" style="max-height: 220px; overflow-y: auto; margin-bottom: 1.5rem; border-bottom: 1px solid #ebdcd0; padding-bottom: 1rem;">
+        <p style="color:#8c786a; text-align:center; padding:1.5rem 0;">Your cart is empty. Click '+' on any coffee, food, or dessert to add!</p>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; background:#fbf6f0; padding:1rem 1.2rem; border-radius:14px; margin-bottom:1.8rem; border:1px solid #e5d8ca;">
+        <span style="font-weight:700; color:#2a190e; font-size:1.1rem;">Total Order Amount:</span>
+        <span id="cart-total-price" style="font-family:'Playfair Display', Georgia, serif; font-size:1.5rem; font-weight:700; color:#7c401c;">$0.00</span>
+      </div>
+
+      <!-- Table Checkout Form -->
+      <form action="/order" method="POST" id="checkout-form" onsubmit="prepareCheckoutData(event)">
+        <input type="hidden" name="items_summary" id="form-items-summary">
+        <input type="hidden" name="total_amount" id="form-total-amount">
+
+        <h4 style="font-family:'Playfair Display', Georgia, serif; font-size:1.2rem; color:#7c401c; margin-bottom:1rem;">Table Checkout Details</h4>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <label style="font-size:0.8rem; font-weight:700; color:#7c401c; display:block; margin-bottom:0.3rem;">YOUR NAME</label>
+            <input type="text" name="customer_name" class="form-input" placeholder="e.g. Sarah" required style="width:100%; padding:0.7rem; border-radius:12px; border:1px solid #e5d8ca;">
+          </div>
+          <div>
+            <label style="font-size:0.8rem; font-weight:700; color:#7c401c; display:block; margin-bottom:0.3rem;">TABLE NUMBER</label>
+            <select name="table_number" class="form-select" required style="width:100%; padding:0.7rem; border-radius:12px; border:1px solid #e5d8ca;">
+              <option value="">Select Table #</option>
+              <option value="Table 1">Table 1 (Indoor)</option>
+              <option value="Table 2">Table 2 (Indoor)</option>
+              <option value="Table 3">Table 3 (Window View)</option>
+              <option value="Table 4">Table 4 (Patio)</option>
+              <option value="Table 5">Table 5 (Patio)</option>
+              <option value="Table 6">Table 6 (Corner Couch)</option>
+              <option value="Table 7">Table 7 (Bar Counter)</option>
+              <option value="Table 8">Table 8 (Private Booth)</option>
+              <option value="Table 9">Table 9 (Garden)</option>
+              <option value="Table 10">Table 10 (Garden)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+          <div>
+            <label style="font-size:0.8rem; font-weight:700; color:#7c401c; display:block; margin-bottom:0.3rem;">EMAIL ADDRESS</label>
+            <input type="email" name="customer_email" class="form-input" placeholder="e.g. sarah@example.com" required style="width:100%; padding:0.7rem; border-radius:12px; border:1px solid #e5d8ca;">
+          </div>
+          <div>
+            <label style="font-size:0.8rem; font-weight:700; color:#7c401c; display:block; margin-bottom:0.3rem;">PHONE NUMBER</label>
+            <input type="text" name="customer_phone" class="form-input" placeholder="e.g. +1 555 0192" required style="width:100%; padding:0.7rem; border-radius:12px; border:1px solid #e5d8ca;">
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <button type="submit" id="place-order-btn" class="btn btn-primary" style="width:100%; padding:1rem; font-size:1.1rem; border-radius:9999px;">Place Table Order Now →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Pure CSS Target Modal for Item Added (#ordered) -->
   <div class="target-modal" id="ordered">
     <div class="modal-card">
       <div style="font-size:3.5rem; color:#cb9b57; margin-bottom:1rem;">☕</div>
-      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:0.5rem; color:#2a190e;">Item Added to Order!</h3>
-      <p style="color:#8c786a; margin-bottom:1.5rem;">Your selection has been added to your coffee order at Viyora Café.</p>
-      <a href="#" class="btn btn-primary">Continue Browsing</a>
+      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:0.5rem; color:#2a190e;">Item Added to Cart!</h3>
+      <p style="color:#8c786a; margin-bottom:1.5rem;">Your item has been added to your shopping cart.</p>
+      <div style="display:flex; gap:1rem; justify-center;">
+        <a href="#" class="btn btn-secondary">Continue Browsing</a>
+        <a href="#cart-view" class="btn btn-primary">View Cart & Checkout →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pure CSS Target Modal for Order Confirmed (#order-confirmed) -->
+  <div class="target-modal" id="order-confirmed">
+    <div class="modal-card">
+      <div style="font-size:3.5rem; color:#cb9b57; margin-bottom:1rem; animation:pulseLogo 2s infinite alternate;">🎉</div>
+      <h3 style="font-family:'Playfair Display', Georgia, serif; font-size:1.8rem; margin-bottom:0.5rem; color:#2a190e;">Order Sent to Kitchen & Barista!</h3>
+      <p style="color:#8c786a; margin-bottom:1.5rem;">Thank you! Your order has been saved in our database for your table. Our Viyora team is preparing your coffee & food right now!</p>
+      <a href="#" class="btn btn-primary" onclick="clearCartState()">Awesome!</a>
     </div>
   </div>
 
@@ -1090,5 +1175,148 @@
     </div>
   </footer>
 
+  <!-- Shopping Cart Manager Script -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem('viyora_cart') || '[]');
+
+    function updateCartUI() {
+      let count = 0;
+      let total = 0;
+      let container = document.getElementById('cart-items-container');
+
+      if (!cart || cart.length === 0) {
+        document.getElementById('cart-badge').innerText = '0';
+        document.getElementById('cart-total-price').innerText = '$0.00';
+        if (container) {
+          container.innerHTML = '<p style="color:#8c786a; text-align:center; padding:1.5rem 0;">Your cart is empty. Click \'+\' on any item to add!</p>';
+        }
+        return;
+      }
+
+      let html = '';
+      cart.forEach((item, index) => {
+        let itemTotal = item.price * item.qty;
+        count += item.qty;
+        total += itemTotal;
+
+        html += `
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.7rem 0; border-bottom:1px solid #f4eae0;">
+            <div>
+              <strong style="color:#2a190e; font-size:0.95rem;">${item.name}</strong><br>
+              <small style="color:#8c786a;">$${item.price.toFixed(2)} each</small>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+              <button onclick="changeQty(${index}, -1)" style="background:#e5d8ca; border:none; width:26px; height:26px; border-radius:50%; font-weight:700; cursor:pointer;">-</button>
+              <span style="font-weight:700; color:#7c401c; min-width:20px; text-align:center;">${item.qty}</span>
+              <button onclick="changeQty(${index}, 1)" style="background:#e5d8ca; border:none; width:26px; height:26px; border-radius:50%; font-weight:700; cursor:pointer;">+</button>
+              <span style="font-weight:700; color:#2a190e; width:65px; text-align:right;">$${itemTotal.toFixed(2)}</span>
+              <button onclick="removeItem(${index})" style="background:none; border:none; color:#c0392b; cursor:pointer; font-size:1rem; margin-left:0.3rem;">✕</button>
+            </div>
+          </div>
+        `;
+      });
+
+      document.getElementById('cart-badge').innerText = count;
+      document.getElementById('cart-total-price').innerText = '$' + total.toFixed(2);
+      if (container) container.innerHTML = html;
+
+      localStorage.setItem('viyora_cart', JSON.stringify(cart));
+    }
+
+    function addToCart(name, price) {
+      let existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: name, price: price, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function changeQty(index, delta) {
+      if (cart[index]) {
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+      }
+      updateCartUI();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function clearCartState() {
+      cart = [];
+      localStorage.removeItem('viyora_cart');
+      updateCartUI();
+    }
+
+    function prepareCheckoutData(event) {
+      if (!cart || cart.length === 0) {
+        alert("Your cart is empty! Please add items before placing an order.");
+        event.preventDefault();
+        return false;
+      }
+
+      let summary = cart.map(i => `${i.qty}x ${i.name} ($${(i.price * i.qty).toFixed(2)})`).join('\n');
+      let total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+
+      document.getElementById('form-items-summary').value = summary;
+      document.getElementById('form-total-amount').value = total.toFixed(2);
+      return true;
+    }
+
+    // Attach click listeners to all '+' add-btn elements on page
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.specialty-card').forEach(card => {
+        let titleEl = card.querySelector('.card-title');
+        let priceEl = card.querySelector('.card-price');
+        let btn = card.querySelector('.add-btn');
+
+        if (titleEl && priceEl && btn) {
+          let name = titleEl.innerText.trim();
+          let price = parseFloat(priceEl.innerText.replace('$', '').trim()) || 0;
+
+          btn.addEventListener('click', function(e) {
+            addToCart(name, price);
+          });
+        }
+      });
+
+      updateCartUI();
+    });
+  </script>
+
+  <style>
+    .cart-floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #7c401c 0%, #a45a2b 100%);
+      color: #ffffff;
+      padding: 0.9rem 1.6rem;
+      border-radius: 9999px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 30px rgba(124, 64, 28, 0.45);
+      border: 2px solid #cb9b57;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .cart-floating-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 14px 40px rgba(124, 64, 28, 0.6);
+      color: #ffffff;
+    }
+  </style>
+
 </body>
 </html>
+
