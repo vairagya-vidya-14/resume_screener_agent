@@ -1,0 +1,15 @@
+Devon Brooks
+Technical Content Writer & Documentation Manager | Email: devon.brooks@email.com | Phone: +1-555-019-2834
+LinkedIn: https://www.linkedin.com/in/devon-brooks | GitHub: https://github.com/devonbrooks
+
+SUMMARY
+Technical Content Writer crafting clear API documentation, developer guides, and tech articles.
+
+EDUCATION
+Bachelor of Arts in English Literature, NYU (2018-2022)
+
+EXPERIENCE (3 Years)
+Technical Writer at DevDocs Inc (2022-Present): Authored developer documentation and API references.
+
+SKILLS
+Technical Writing, Communication, Research, Git, Markdown, Content Strategy
