@@ -1,0 +1,15 @@
+Priya Sharma
+Machine Learning & MLOps Engineer | Email: priya.sharma@email.com | Phone: +1-555-019-2834
+LinkedIn: https://www.linkedin.com/in/priya-sharma | GitHub: https://github.com/priyasharma
+
+SUMMARY
+MLOps Engineer passionate about continuous integration and automated deployment of deep learning models.
+
+EDUCATION
+Master of Engineering in Artificial Intelligence, Carnegie Mellon University (2019-2021)
+
+EXPERIENCE (5 Years)
+MLOps Lead at CloudAI (2021-Present): Deployed Kubernetes clusters for PyTorch LLM inference microservices on AWS EKS.
+
+SKILLS
+Python, PyTorch, Scikit-Learn, MLOps, Docker, Kubernetes, MLflow, FastAPI, AWS, LLM, RAG, Git, CI/CD

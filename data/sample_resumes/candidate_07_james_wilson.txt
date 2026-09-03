@@ -1,0 +1,15 @@
+James Wilson
+Frontend UI/UX React Developer | Email: james.wilson@email.com | Phone: +1-555-019-2834
+LinkedIn: https://www.linkedin.com/in/james-wilson | GitHub: https://github.com/jameswilson
+
+SUMMARY
+Frontend Engineer focused on building reactive user interfaces in React and TypeScript.
+
+EDUCATION
+Bachelor of Science in Web Design, Oregon State (2019-2023)
+
+EXPERIENCE (2 Years)
+Frontend Developer at WebStudio (2023-Present): Created user dashboard components.
+
+SKILLS
+JavaScript, TypeScript, React, HTML/CSS, Node.js, Git, Figma, Web Development
