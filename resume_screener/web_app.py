@@ -1,20 +1,25 @@
 import os
 import sys
 
-# Ensure parent directory is in sys.path for Streamlit Cloud compatibility
+# Ensure parent and current directories are in sys.path for Streamlit Cloud
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
-if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
-root_dir = os.path.dirname(parent_dir)
-if root_dir not in sys.path:
-    sys.path.insert(0, root_dir)
+repo_root = os.path.dirname(parent_dir)
+
+for path in [parent_dir, current_dir, repo_root]:
+    if path and path not in sys.path:
+        sys.path.insert(0, path)
 
 import tempfile
 import pandas as pd
 import streamlit as st
-from resume_screener.agent import ResumeScreeningAgent
-from resume_screener.parsers.resume_parser import ResumeParser
+
+try:
+    from resume_screener.agent import ResumeScreeningAgent
+    from resume_screener.parsers.resume_parser import ResumeParser
+except ModuleNotFoundError:
+    from agent import ResumeScreeningAgent
+    from parsers.resume_parser import ResumeParser
 
 st.set_page_config(
     page_title="AI Resume Screening Agent | Rooman Challenge",

@@ -1,19 +1,25 @@
 import os
 import sys
 
-# Ensure parent directory is in sys.path for Streamlit Cloud compatibility
+# Ensure parent and current directories are in sys.path for Streamlit Cloud
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
-grandparent_dir = os.path.dirname(parent_dir)
-if grandparent_dir not in sys.path:
-    sys.path.insert(0, grandparent_dir)
+repo_root = os.path.dirname(parent_dir)
+
+for path in [parent_dir, current_dir, repo_root]:
+    if path and path not in sys.path:
+        sys.path.insert(0, path)
 
 import json
 import re
 from typing import Dict, Any, List, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from resume_screener.extractors.entity_extractor import EntityExtractor
+
+try:
+    from resume_screener.extractors.entity_extractor import EntityExtractor
+except ModuleNotFoundError:
+    from extractors.entity_extractor import EntityExtractor
 
 class HybridScorer:
     """
