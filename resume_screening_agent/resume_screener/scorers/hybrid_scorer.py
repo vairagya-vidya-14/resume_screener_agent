@@ -1,10 +1,25 @@
 import os
+import sys
+
+# Ensure parent and current directories are in sys.path for Streamlit Cloud
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+repo_root = os.path.dirname(parent_dir)
+
+for path in [parent_dir, current_dir, repo_root]:
+    if path and path not in sys.path:
+        sys.path.insert(0, path)
+
 import json
 import re
 from typing import Dict, Any, List, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from resume_screener.extractors.entity_extractor import EntityExtractor
+
+try:
+    from resume_screener.extractors.entity_extractor import EntityExtractor
+except ModuleNotFoundError:
+    from extractors.entity_extractor import EntityExtractor
 
 class HybridScorer:
     """
@@ -91,7 +106,6 @@ class HybridScorer:
             vectorizer = TfidfVectorizer(stop_words='english', ngram_range=(1, 2))
             tfidf_matrix = vectorizer.fit_transform([jd_text, resume_text])
             raw_sim = float(cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0])
-            # Calibrate: raw cosine similarity of 0.30+ is excellent for document vectors
             scaled = min(100.0, (raw_sim / 0.30) * 100.0)
             return round(scaled, 2)
         except Exception:

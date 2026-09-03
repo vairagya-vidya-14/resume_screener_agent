@@ -1,10 +1,27 @@
 import os
+import sys
+
+# Ensure parent and current directories are in sys.path for Streamlit Cloud
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+repo_root = os.path.dirname(parent_dir)
+
+for path in [current_dir, parent_dir, repo_root]:
+    if path and path not in sys.path:
+        sys.path.insert(0, path)
+
 import json
 import pandas as pd
 from typing import Dict, Any, List, Optional
-from resume_screener.parsers.resume_parser import ResumeParser
-from resume_screener.extractors.entity_extractor import EntityExtractor
-from resume_screener.scorers.hybrid_scorer import HybridScorer
+
+try:
+    from parsers.resume_parser import ResumeParser
+    from extractors.entity_extractor import EntityExtractor
+    from scorers.hybrid_scorer import HybridScorer
+except (ImportError, ModuleNotFoundError):
+    from resume_screener.parsers.resume_parser import ResumeParser
+    from resume_screener.extractors.entity_extractor import EntityExtractor
+    from resume_screener.scorers.hybrid_scorer import HybridScorer
 
 class ResumeScreeningAgent:
     """

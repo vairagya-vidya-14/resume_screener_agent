@@ -1,9 +1,25 @@
 import os
+import sys
+
+# Add directory paths to sys.path
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+repo_root = os.path.dirname(parent_dir)
+
+for p in [current_dir, parent_dir, repo_root]:
+    if p and p not in sys.path:
+        sys.path.insert(0, p)
+
 import tempfile
 import pandas as pd
 import streamlit as st
-from resume_screener.agent import ResumeScreeningAgent
-from resume_screener.parsers.resume_parser import ResumeParser
+
+try:
+    from agent import ResumeScreeningAgent
+    from parsers.resume_parser import ResumeParser
+except (ImportError, ModuleNotFoundError):
+    from resume_screener.agent import ResumeScreeningAgent
+    from resume_screener.parsers.resume_parser import ResumeParser
 
 st.set_page_config(
     page_title="AI Resume Screening Agent | Rooman Challenge",
@@ -25,7 +41,7 @@ def load_preset_jds():
     presets = {}
     
     # Senior AI Engineer
-    jd1_path = os.path.join("data", "sample_jds", "senior_ai_engineer.txt")
+    jd1_path = os.path.join(parent_dir, "data", "sample_jds", "senior_ai_engineer.txt")
     if os.path.exists(jd1_path):
         with open(jd1_path, "r", encoding="utf-8") as f:
             presets["Senior AI / ML Engineer"] = f.read()
@@ -42,7 +58,7 @@ Requirements:
 - B.Tech or Bachelor's degree in Computer Science, Engineering, or STEM field."""
 
     # Lead Data Scientist
-    jd2_path = os.path.join("data", "sample_jds", "data_scientist.txt")
+    jd2_path = os.path.join(parent_dir, "data", "sample_jds", "data_scientist.txt")
     if os.path.exists(jd2_path):
         with open(jd2_path, "r", encoding="utf-8") as f:
             presets["Lead Data Scientist"] = f.read()
@@ -129,12 +145,11 @@ def main():
         help="You can select and upload multiple candidate resumes at the same time."
     )
 
-    sample_dir = os.path.join("data", "sample_resumes")
+    sample_dir = os.path.join(parent_dir, "data", "sample_resumes")
     use_sample_btn = st.checkbox("Include Benchmark Sample Resumes (13 Candidates)", value=False)
 
     run_btn = st.button("🚀 Screen Resumes & Rank Shortlist", type="primary", use_container_width=True)
 
-    # ONLY run screening when user explicitly clicks button or has uploaded files / checked sample box
     if run_btn:
         if not uploaded_files and not use_sample_btn:
             st.warning("⚠️ Please upload resume files (PDF, DOCX, TXT) above or check 'Include Benchmark Sample Resumes' to screen.")
