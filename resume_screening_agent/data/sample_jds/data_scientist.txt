@@ -1,0 +1,11 @@
+Job Title: Lead Data Scientist
+Department: Data Analytics & Predictive Insights
+
+Job Overview:
+Looking for a Lead Data Scientist to build predictive analytics models, perform statistical modeling, and extract key business insights from massive datasets.
+
+Key Qualifications:
+- Master's or Bachelor's in Data Science, Statistics, Mathematics, or Computer Science.
+- 3+ years experience with Python, Pandas, NumPy, Scikit-Learn, SQL, and Data Analysis.
+- Experience with A/B testing, Feature Engineering, Spark, Snowflake, and Matplotlib.
+- Strong communication and product strategy alignment.

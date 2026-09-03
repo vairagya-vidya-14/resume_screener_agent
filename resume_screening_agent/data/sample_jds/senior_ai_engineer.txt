@@ -1,0 +1,20 @@
+Job Title: Senior AI / ML Research Engineer
+Department: Artificial Intelligence & Autonomous Systems
+Location: Hybrid / Remote
+
+Job Overview:
+We are seeking a highly skilled Senior AI/ML Engineer to lead the design, development, and deployment of next-generation Generative AI, LLM, and NLP applications. The candidate will build production RAG pipelines, fine-tune open-source transformers (Llama, Mistral, BERT), and architect scalable MLOps infrastructure.
+
+Key Responsibilities:
+- Design and build end-to-end Retrieval-Augmented Generation (RAG) systems using LangChain, LlamaIndex, PyTorch, and vector databases.
+- Fine-tune large language models (LLMs) and transformer architectures for domain-specific tasks.
+- Implement robust MLOps pipelines using Docker, Kubernetes, MLflow, and AWS/GCP cloud platforms.
+- Perform feature engineering, model evaluation, and A/B testing for high-throughput AI microservices.
+- Collaborate with product and software engineering teams to ship production REST APIs (FastAPI/Flask).
+
+Required Qualifications & Skills:
+- Education: Master's or PhD in Computer Science, Artificial Intelligence, Data Science, or related STEM field.
+- Experience: 4+ years of hands-on experience in Machine Learning, Deep Learning, and NLP.
+- Technical Core: Python, PyTorch, TensorFlow, Scikit-Learn, Transformers, Hugging Face, NLP, LLM, Prompt Engineering, RAG.
+- Engineering & Ops: Docker, Kubernetes, AWS, SQL, PostgreSQL, REST API, Git, CI/CD, MLOps.
+- Soft Skills: Strong problem-solving ability, technical leadership, agile collaboration, and research capability.
